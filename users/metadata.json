@@ -1,0 +1,39 @@
+{
+  "users": {
+    "USR_001": {
+      "username": "john_doe",
+      "password_hash": "hashed_password_123",
+      "personal_info": {
+        "nama_lengkap": "John Doe",
+        "email": "john@example.com",
+        "telepon": "+628123456789",
+        "alamat": "Jakarta, Indonesia"
+      },
+      "professional_info": {
+        "bidang_pekerjaan": "software_development",
+        "pengalaman_tahun": 3,
+        "keahlian": ["Python", "JavaScript", "React"]
+      },
+      "account_metadata": {
+        "tanggal_daftar": "2024-01-15T10:30:00Z",
+        "status": "active",
+        "role": "user",
+        "terakhir_login": "2024-01-20T14:25:00Z"
+      },
+      "security_qa": [
+        {
+          "pertanyaan": "Apa nama sekolah dasar Anda?",
+          "jawaban_hash": "hashed_answer_1"
+        }
+      ]
+    }
+  },
+  "admin_users": {
+    "ADMIN_001": {
+      "username": "admin1",
+      "password_hash": "password",
+      "role": "admin",
+      "permissions": ["view_reports", "manage_users", "system_config"]
+    }
+  }
+}

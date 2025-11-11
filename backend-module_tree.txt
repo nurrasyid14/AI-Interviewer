@@ -1,0 +1,114 @@
+app/
+└── backend/
+    ├── __init__.py
+    │
+    ├── api_call/
+    │   └── external_services.py              # Optional external API handlers
+    │
+    ├── context_classifier/
+    │   ├── __init__.py
+    │   └── context_classifier.py             # Classifies question contexts
+    │
+    ├── preprocessor/
+    │   ├── __init__.py
+    │   │
+    │   ├── [ingestion]/
+    │   │   ├── input_handler.py         # read text/speech input
+    │   │   ├── audio_transcriber.py     # optional: speech → text
+    │   │   └── translator.py            # multilingual translation (Googletrans / DeepL)
+    │   │
+    │   ├── [text_cleaning]/
+    │   │   ├── normalizer.py            # lowercasing, punctuation, digits
+    │   │   ├── stopword_remover.py      # remove language stopwords
+    │   │   └── tokenizer.py             # split sentences & words
+    │   │
+    │   ├── [linguistics]/
+    │   │   ├── lemmatizer_stemmer.py    # stemming & lemmatization
+    │   │   └── pos_tagger.py            # optional: POS tagging for lemmatization context
+    │   │
+    │   ├── [feature_extraction]/
+    │   │   ├── bag_of_words.py
+    │   │   ├── tf_idf.py
+    │   │   └── word_embedding.py        # Word2Vec / FastText / Transformer embeddings
+    │   │
+    │   └── preprocessor_pipeline.py     # orchestrates all steps
+    ├── subset/
+    │   ├── __init__.py
+    │   ├── k_fold.py
+    │   ├── leave_one_out.py
+    │   ├── cluster_subset.py
+    │   └── subset_utils.py
+    │
+    ├── ensemble/
+    │   ├── __init__.py
+    │   ├── random_forest.py
+    │   ├── neural_network.py
+    │   ├── svm.py
+    │   ├── naive_bayes.py
+    │   └── ensemble_controller.py
+    │
+    ├── learning_evaluation/
+    │   ├── __init__.py
+    │   ├── metrics.py                        # Accuracy, F1, precision, recall
+    │   ├── calibration.py                    # Reliability of predicted probabilities
+    │   ├── bias_analysis.py                  # Fairness metrics
+    │   └── visualizer.py                     # Plotly visual dashboard
+    │
+    ├── relevance/
+    │   ├── __init__.py
+    │   ├── relevance_evaluator.py            # Cosine similarity, keyword relevance
+    │   └── topic_alignment.py                # Compare answer to question themes
+    │
+    ├── sentiment/
+    │   ├── __init__.py
+    │   ├── sentiment_analyzer.py             # Polarity & affect detection
+    │   └── tone_model.py                     # Optional tone or prosody model
+    │
+    ├── reliability/
+    │   ├── __init__.py
+    │   ├── lawshes_cvr.py                    # CVR computation (I/O Psychology)
+    │   ├── cronbach_alpha.py                 # Consistency metric
+    │   ├── reliability_metric.py
+    │   └── reliability_reporter.py
+    │
+    ├── decisionmaker/
+    │   ├── __init__.py
+    │   ├── decision_rules.py                 # Apply reliability threshold
+    │   ├── threshold_logic.py
+    │   ├── explainability.py                 # Why accepted/rejected
+    │   └── decision_logger.py
+    │
+    ├── reporter/
+    │   ├── __init__.py
+    │   ├── db_connector.py                   # PostgreSQL integration
+    │   ├── result_logger.py
+    │   ├── report_generator.py
+    │   ├── dashboard_updater.py
+    │   └── visual_reporter.py                # Plotly report generation
+    │
+    ├── visualizer/                
+    │   ├── __init__.py
+    │   ├── [evaluation/]          # Visuals for developers & data scientists
+    │   │   ├── model_performance.py
+    │   │   ├── confusion_matrix_plotter.py
+    │   │   └── reliability_distribution.py
+    │   │
+    │   ├── [user_dashboard/]      # Visuals for end users / applicants
+    │   │   ├── reliability_overview.py
+    │   │   ├── sentiment_chart.py
+    │   │   ├── relevance_heatmap.py
+    │   │   └── overall_dashboard.py
+    │   │
+    │   ├── [shared_components/]   # Shared utilities (Plotly themes, color palettes, exports)
+    │   │   ├── plotly_theme.py
+    │   │   └── export_utils.py
+    │   │
+    │   └── visualizer_pipeline.py # Orchestrates visualization workflows
+    │
+    ├── pipeline_controller.py                # Orchestrates the full sequence
+    └── utils/
+        ├── __init__.py
+        ├── config_loader.py
+        ├── language_tools.py
+        ├── io_utils.py
+        └── logger.py

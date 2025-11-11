@@ -1,0 +1,76 @@
+{
+  "users": {
+    "USR_001": {
+      "id": "USR_001",
+      "role": "user",
+      "nama_lengkap": "John Doe",
+      "nama_panggilan": "John",
+      "usia": 26,
+      "kontak": {
+        "email": "john@example.com",
+        "telepon": "+628123456789"
+      },
+      "username": "john_doe",
+      "//password//": "hashed_password_123",
+      "//security_qa//": [
+        {
+          "pertanyaan": "Apa nama sekolah dasar Anda?",
+          "jawaban_hash": "hashed_answer_1"
+        }
+      ],
+      "[pendidikan_terakhir]": "S1 Teknik Informatika",
+      "[minat]": [
+        "Software Development",
+        "Data Analysis"
+      ],
+      "[kepribadian]": "INTJ - Visionary Thinker",
+      "[keahlian]": [
+        "Python",
+        "JavaScript",
+        "React"
+      ],
+      "account_metadata": {
+        "tanggal_daftar": "2025-01-15T10:30:00Z",
+        "status": "active",
+        "terakhir_login": "2025-10-08T14:25:00Z"
+      }
+    }
+  },
+  "admin_users": {
+    "ADMIN_001": {
+      "id": "ADMIN_001",
+      "role": "admin",
+      "nama_lengkap": "Admin HR",
+      "nama_panggilan": "Admin",
+      "usia": 34,
+      "kontak": {
+        "email": "admin_hr@example.com",
+        "telepon": "+628987654321"
+      },
+      "username": "admin_hr",
+      "//password//": "hashed_admin_pw",
+      "//security_qa//": [
+        {
+          "pertanyaan": "Apa nama universitas Anda?",
+          "jawaban_hash": "hashed_answer_admin"
+        }
+      ],
+      "[pendidikan_terakhir]": "S2 Psikologi Industri",
+      "[minat]": [
+        "Manajemen SDM",
+        "Analisis Perilaku"
+      ],
+      "[kepribadian]": "ENTJ - Executive",
+      "[keahlian]": [
+        "Assessment",
+        "Recruitment",
+        "Leadership"
+      ],
+      "account_metadata": {
+        "tanggal_daftar": "2024-11-20T10:30:00Z",
+        "status": "active",
+        "terakhir_login": "2025-10-08T09:15:00Z"
+      }
+    }
+  }
+}

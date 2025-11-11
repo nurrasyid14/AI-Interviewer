@@ -1,0 +1,3 @@
+session_id,tanggal_interview,durasi_sesi,jumlah_pertanyaan,avg_reliability_score,avg_commitment_score,behavioral_consistency,communication_clarity,problem_solving,emotional_stability,ai_notes_summary,overall_fitness_score,threshold,status
+INT_20251008_01,2025-10-08,18,12,0.83,0.84,0.88,0.8,0.79,0.82,"Menjawab dengan tenang, mampu menjelaskan pengalaman kerja dengan struktur jelas.",0.84,0.8,Lulus
+INT_20251002_01,2025-10-02,15,10,0.75,0.77,0.74,0.78,0.71,0.76,"Kandidat terlihat gugup di awal sesi, namun dapat menjawab cukup baik.",0.76,0.8,Tidak Lulus
