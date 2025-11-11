@@ -9,13 +9,13 @@ The Preprocessor is responsible for converting raw, multilingual audio and textu
 It forms the foundation for downstream processes like feature extraction, sentiment analysis, and decision modeling.
 
 This module is composed of three key blocks:
-
+```
 preprocessor/
 │
 ├── ingestion/          # Handles data input, transcription, and translation
 ├── text_cleaning/      # Normalization, tokenization, stopword removal, etc.
 └── linguistics/        # Lemmatization, stemming, and POS tagging
-
+```
 ## 🧩 Submodules
 ### 1. Ingestion
 
@@ -67,21 +67,22 @@ Feature Extraction (next block)
 
 Each stage outputs standardized, language-agnostic text vectors ready for feature engineering and learning models.
 
-🧰 Requirements
+## 🧰 Requirements
+```
 nltk
 spacy
 scikit-learn
 speechrecognition
 pydub
 numpy
-
+```
 
 ## 🗣️ For multilingual support, install the spaCy model(s) you need:
-
+```
 python -m spacy download en_core_web_md
 python -m spacy download id_core_news_md
 python -m spacy download xx_ent_wiki_sm
-
+```
 ## ⚙️ Usage Example
 ```
 from preprocessor.ingestion.audio_transcriber import AudioTranscriber
