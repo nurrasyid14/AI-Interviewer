@@ -84,27 +84,21 @@ python -m spacy download id_core_news_md
 python -m spacy download xx_ent_wiki_sm
 ```
 ## ⚙️ Usage Example
-```
+``` py
 from preprocessor.ingestion.audio_transcriber import AudioTranscriber
 from preprocessor.text_cleaning.normalizer import TextNormalizer
 from preprocessor.linguistics.lemma_stem import LemmaStemmer
-```
 
-### 1️⃣ Transcribe audio
-```
-transcriber = AudioTranscriber()
-text = transcriber.transcribe("input/interview_sample.wav")
-```
 
-### 2️⃣ Normalize
-```
+# 1️⃣ Transcribe audio
+# transcriber = AudioTranscriber()
+# text = transcriber.transcribe("input/interview_sample.wav")
+
+# 2️⃣ Normalize
 normalizer = TextNormalizer()
 clean_text = normalizer.clean(text)
-```
 
-### 3️⃣ Lemmatize
-
-```
+# 3️⃣ Lemmatize
 lemmatizer = LemmaStemmer(lang="en")
 processed = lemmatizer.process(clean_text)
 
