@@ -15,7 +15,7 @@ To simulate an intelligent interviewer that:
 ---
 
 ## 🧩 Backend Folder Overview
-
+```
 backend/
 ├── api_call/ # Handles API endpoints & communication layer
 │
@@ -39,11 +39,11 @@ backend/
 ├── sentiment/ # Sentiment and affective tone analysis
 │
 └── init.py
-
+```
 ---
 
 ## 🔁 System Pipeline
-
+```
 [Input Speech/Text]
 ↓
 🧩 Preprocessing
@@ -67,7 +67,7 @@ backend/
 ├─ Generates reliability report
 ├─ Stores results under /data/reports
 └─ Feeds data to frontend visualizations (Plotly)
-
+```
 ---
 
 ## 🧱 Key Components
@@ -100,7 +100,7 @@ Compiles all logs and analytical summaries:
 - Data export to `data/reports/`
 
 ## Folder Structure
-
+```
 app/
 └── backend/
     ├── __init__.py
@@ -219,7 +219,7 @@ app/
         ├── language_tools.py
         ├── io_utils.py
         └── logger.py
-
+```
 
 ---
 
