@@ -15,7 +15,7 @@ To simulate an intelligent interviewer that:
 ---
 
 ## 🧩 Backend Folder Overview
-
+```
 backend/
 ├── api_call/ # Handles API endpoints & communication layer
 │
@@ -39,11 +39,11 @@ backend/
 ├── sentiment/ # Sentiment and affective tone analysis
 │
 └── init.py
-
+```
 ---
 
 ## 🔁 System Pipeline
-
+```
 [Input Speech/Text]
 ↓
 🧩 Preprocessing
@@ -67,7 +67,7 @@ backend/
 ├─ Generates reliability report
 ├─ Stores results under /data/reports
 └─ Feeds data to frontend visualizations (Plotly)
-
+```
 ---
 
 ## 🧱 Key Components
@@ -100,7 +100,7 @@ Compiles all logs and analytical summaries:
 - Data export to `data/reports/`
 
 ## Folder Structure
-
+```
 app/
 └── backend/
     ├── __init__.py
@@ -219,7 +219,7 @@ app/
         ├── language_tools.py
         ├── io_utils.py
         └── logger.py
-
+```
 
 ---
 
@@ -244,50 +244,57 @@ app/
 ## 🧰 Dependencies (Installed via `requirements.txt`)
 
 ### --- CORE ENVIRONMENT ---
+```
 python-dotenv==1.0.1          # For .env configuration
 numpy==1.26.4                 # Base math operations
 pandas==2.2.3                 # Data handling (reports, logs, etc.)
 scikit-learn==1.5.2           # ML models, ensemble learning, subsetting (KFold, LOOCV)
 scipy==1.14.1                 # Statistical / psychometric computation
-
+```
 ### --- NLP / TEXT MINING ---
+```
 nltk==3.9.1                   # Tokenization, stemming, stopwords
 spacy==3.7.5                  # Linguistic parsing, POS tagging, NER
 gensim==4.3.3                 # Word2Vec, TF-IDF, topic models
 sentence-transformers==3.2.1  # Semantic embeddings (cross-lingual)
 langdetect==1.0.9             # Auto-detect language
 deep-translator==1.11.4       # Translate user input to English if needed
-
+```
 ### --- AI / ENSEMBLE / MODEL HANDLING ---
+```
 xgboost==2.1.3                # Gradient boosting ensemble
 lightgbm==4.3.0               # Efficient ensemble variant
 joblib==1.4.2                 # Model persistence & caching
 imbalanced-learn==0.12.3      # Handle dataset imbalance (psychology corpora often skewed)
-
+```
 ### --- RELIABILITY / PSYCHOMETRICS ---
+```
 pingouin==0.5.4               # Reliability metrics (Cronbach α, ICC, etc.)
 statsmodels==0.14.4           # Advanced statistical analysis
 factor-analyzer==0.5.1        # Factor analysis for I/O psychology dimensions
-
+```
 ### --- DATABASE / STORAGE ---
+```
 psycopg2-binary==2.9.10       # PostgreSQL connector
 SQLAlchemy==2.0.36            # ORM for flexible database schema mapping
-
+```
 ### --- VISUALIZATION (Plotly only) ---
+```
 plotly==5.24.1                # Interactive dashboard & reliability visualization
 dash==2.18.2                  # Plotly Dash web interface (optional)
 kaleido==0.2.1                # Static image export for Plotly
-
+```
 ### --- SYSTEM / UTILITIES ---
+```
 tqdm==4.67.1                  # Progress bar for batch jobs
 rich==13.9.3                  # Console visualization (pretty logs)
 loguru==0.7.3                 # Logging handler (backend/reporting)
-
+```
 ---
 
 
 
-🔮 Future Extensions
+**🔮 Future Extensions**
 Add Voice Sentiment Recognition (acoustic + linguistic fusion)
 
 Expand Multilingual Support (local cultural tones)
